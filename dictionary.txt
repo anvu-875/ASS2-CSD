@@ -1,0 +1,100 @@
+measuring | đo lường, tiêu chuẩn
+electronics | Điện tử dân dụng
+facility | nhà vệ sinh
+computer | máy tính
+engineer | kỹ sư
+dictionary | từ điển
+weather | thời tiết
+language | ngôn ngữ
+school | trường học
+book | sách
+table | bàn
+chair | ghế
+pen | bút
+paper | giấy
+water | nước
+fire | lửa
+tree | cây cỏ
+mountain | núi
+car | xe hơi
+bicycle | xe đạp
+smartphone | điện thoại thông minh
+internet | internet
+global | toàn cầu
+music | âm nhạc
+movie | phim
+friend | bạn bè
+family | gia đình
+food | thực phẩm
+restaurant | nhà hàng
+travel | du lịch
+holiday | ngày nghỉ
+beach | bãi biển
+vacation | kỳ nghỉ
+hotel | khách sạn
+airport | sân bay
+flight | chuyến bay
+passport | hộ chiếu
+visa | thị thực
+culture | văn hóa
+history | lịch sử
+art | nghệ thuật
+museum | bảo tàng
+science | khoa học
+technology | công nghệ
+space | vũ trụ
+planet | hành tinh
+star | ngôi sao
+universe | vũ trụ
+galaxy | thiên hà
+astronaut | phi hành gia
+kitchen | nhà bếp
+garden | vườn hoa
+flower | hoa
+pet | thú cưng
+dog | con chó
+cat | con mèo
+music | âm nhạc
+dance | khiêu vũ
+song | bài hát
+movie | phim ảnh
+actor | diễn viên
+actress | nữ diễn viên
+director | đạo diễn
+script | kịch bản
+camera | máy ảnh
+photographer | nhiếp ảnh gia
+art | nghệ thuật
+painting | bức tranh
+sculpture | tượng điêu khắc
+museum | bảo tàng
+science | khoa học
+experiment | thí nghiệm
+laboratory | phòng thí nghiệm
+scientist | nhà khoa học
+technology | công nghệ
+computer | máy tính
+software | phần mềm
+website | trang web
+internet | internet
+smartphone | điện thoại thông minh
+social media | mạng xã hội
+friend | bạn bè
+family | gia đình
+love | tình yêu
+happiness | hạnh phúc
+sadness | buồn bã
+emotion | cảm xúc
+dream | giấc mơ
+success | thành công
+failure | thất bại
+courage | can đảm
+fear | sợ hãi
+laughter | tiếng cười
+tears | nước mắt
+mountain | núi
+river | dòng sông
+lake | hồ
+forest | rừng
+desert | sa mạc
+island | hòn đảo
