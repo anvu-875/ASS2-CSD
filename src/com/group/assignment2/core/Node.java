@@ -10,7 +10,7 @@ package com.group.assignment2.core;
  */
 public class Node<T extends Comparable<T>> {
 
-    public T data;
+    T data;
     Node<T> left, right;
     int height;
 

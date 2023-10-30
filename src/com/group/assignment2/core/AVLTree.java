@@ -12,7 +12,7 @@ import java.util.Iterator;
  */
 public class AVLTree<T extends Comparable<T>> implements Iterable<T> {
 
-    public Node<T> root;
+    Node<T> root;
 
     public AVLTree() {
         root = null;
@@ -326,31 +326,31 @@ public class AVLTree<T extends Comparable<T>> implements Iterable<T> {
     }
     
     //V.Test
-    public static void main(String[] args) {
-        AVLTree<Integer> avl = new AVLTree();
-        avl.insert(5);
-        avl.insert(60);
-        avl.insert(10);
-        avl.insert(25);
-        avl.insert(30);
-        avl.insert(48);
-        avl.insert(70);
-//        avl.inorderTraversal((data) -> {
+//    public static void main(String[] args) {
+//        AVLTree<Integer> avl = new AVLTree();
+//        avl.insert(5);
+//        avl.insert(60);
+//        avl.insert(10);
+//        avl.insert(25);
+//        avl.insert(30);
+//        avl.insert(48);
+//        avl.insert(70);
+////        avl.inorderTraversal((data) -> {
+////            System.out.print(data + " ");
+////        });
+////        System.out.println();
+//        avl.preorderTraversal((data) -> {
 //            System.out.print(data + " ");
 //        });
-//        System.out.println();
-        avl.preorderTraversal((data) -> {
-            System.out.print(data + " ");
-        });
-//        System.out.println();
-//        avl.postorderTraversal((data ) -> {
-//            System.out.print(data + " ");
-//        });
-//        System.out.println("");
-//        avl.preorderTraversal();
-//        System.out.println(avl.findPath(5, 70));
-//        for (Integer node : avl) {
-//            System.out.println(node);
-//        }
-    }
+////        System.out.println();
+////        avl.postorderTraversal((data ) -> {
+////            System.out.print(data + " ");
+////        });
+////        System.out.println("");
+////        avl.preorderTraversal();
+////        System.out.println(avl.findPath(5, 70));
+////        for (Integer node : avl) {
+////            System.out.println(node);
+////        }
+//    }
 }

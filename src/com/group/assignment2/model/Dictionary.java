@@ -1,45 +1,70 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package com.group.assignment2.model;
+
+import com.group.assignment2.core.AVLTree;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 
 /**
  *
  * @author hoang
  */
-public class Dictionary implements Comparable<Dictionary>{
-    private String englishWord;
-    private String vietnameseWord;
+public class Dictionary {
 
-    public Dictionary(String englishWord, String vietnameseWord) {
-        this.englishWord = englishWord;
-        this.vietnameseWord = vietnameseWord;
+    private AVLTree<Vocabulary> dictionary = new AVLTree();
+    
+    private static Dictionary instance = null;
+
+    private Dictionary() {
+    }
+    
+    public static Dictionary getInstance() {
+        if (Dictionary.instance == null) {
+            Dictionary.instance = new Dictionary();
+            Dictionary.instance.loadDataFromFile("dictionary.txt");
+        }
+        return Dictionary.instance;
     }
 
-    public String getEnglishWord() {
-        return englishWord;
+    private void loadDataFromFile(String filePath) {
+        try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                String[] fields = line.split(" \\| ");
+
+                if (fields.length >= 2) {
+                    String englistWord = fields[0].trim();
+                    String vietnameseWord = fields[1].trim();
+
+                    Vocabulary word = new Vocabulary(englistWord, vietnameseWord);
+                    this.dictionary.insert(word);
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    public void addWord(Vocabulary newWord) {
+        this.dictionary.insert(newWord);
+    }
+    
+    public void removeWord(Vocabulary word) {
+        this.dictionary.delete(word);
     }
 
-    public void setEnglishWord(String englishWord) {
-        this.englishWord = englishWord;
-    }
-
-    public String getVietnameseWord() {
-        return vietnameseWord;
-    }
-
-    public void setVietnameseWord(String vietnameseWord) {
-        this.vietnameseWord = vietnameseWord;
-    }
-
-    @Override
-    public int compareTo(Dictionary o) {
-        return this.englishWord.compareTo(o.englishWord);
-    }
-
-    @Override
-    public String toString() {
-        return  englishWord + " | " + vietnameseWord;
+    public static void main(String[] args) {
+        Dictionary ls = Dictionary.getInstance();
+        int count = 0;
+        for (Vocabulary data : ls.dictionary) {
+            System.out.println(data);
+            count++;
+        }
+        System.out.println(count);
     }
 }
