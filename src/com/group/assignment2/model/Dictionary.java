@@ -8,7 +8,7 @@ package com.group.assignment2.model;
  *
  * @author hoang
  */
-public class Dictionary {
+public class Dictionary implements Comparable<Dictionary>{
     private String englishWord;
     private String vietnameseWord;
 
@@ -31,5 +31,15 @@ public class Dictionary {
 
     public void setVietnameseWord(String vietnameseWord) {
         this.vietnameseWord = vietnameseWord;
+    }
+
+    @Override
+    public int compareTo(Dictionary o) {
+        return this.englishWord.compareTo(o.englishWord);
+    }
+
+    @Override
+    public String toString() {
+        return  englishWord + " | " + vietnameseWord;
     }
 }

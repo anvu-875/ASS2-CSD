@@ -10,11 +10,11 @@ package com.group.assignment2.core;
  */
 public class Node<T extends Comparable<T>> {
 
-    T data;
+    public T data;
     Node<T> left, right;
     int height;
 
-    public Node(T data) {
+    Node(T data) {
         this.data = data;
         this.left = null;
         this.right = null;
