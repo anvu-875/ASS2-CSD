@@ -4,9 +4,6 @@
  */
 package com.group.assignment2.main;
 
-import com.group.assignment2.core.AVLTree;
-import com.group.assignment2.core.Node;
-
 /**
  *
  * @author hoang

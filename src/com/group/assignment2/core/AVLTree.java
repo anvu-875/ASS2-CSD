@@ -17,6 +17,10 @@ public class AVLTree<T extends Comparable<T>> implements Iterable<T> {
     public AVLTree() {
         root = null;
     }
+    
+    public boolean isEmpty() {
+        return this.root == null;
+    }
 
     //I.Handle Height
     private int height(Node<T> node) {
