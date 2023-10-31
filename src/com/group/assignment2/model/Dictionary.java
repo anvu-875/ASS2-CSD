@@ -50,21 +50,27 @@ public class Dictionary {
         }
     }
     
-    public void addWord(Vocabulary newWord) {
-        this.dictionary.insert(newWord);
+    public boolean addWord(Vocabulary newWord) {
+        return this.dictionary.insert(newWord);
     }
     
-    public void removeWord(Vocabulary word) {
-        this.dictionary.delete(word);
+    public boolean removeWord(Vocabulary word) {
+        return this.dictionary.delete(word);
     }
 
+    public Vocabulary searchWord(String englishWord) {
+        Vocabulary word = new Vocabulary(englishWord);
+        return this.dictionary.search(word);
+    }
+    
+    public String getPath(String englishWord1, String englishWord2) {
+        Vocabulary word1 = new Vocabulary(englishWord1);
+        Vocabulary word2 = new Vocabulary(englishWord2);
+        return this.dictionary.findPath(word1, word2);
+    }
+    
     public static void main(String[] args) {
         Dictionary ls = Dictionary.getInstance();
-        int count = 0;
-        for (Vocabulary data : ls.dictionary) {
-            System.out.println(data);
-            count++;
-        }
-        System.out.println(count);
+        System.out.println(ls.getPath("accountable", "website"));
     }
 }

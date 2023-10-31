@@ -16,6 +16,10 @@ public class Vocabulary implements Comparable<Vocabulary>{
         this.englishWord = englishWord;
         this.vietnameseWord = vietnameseWord;
     }
+    
+    public Vocabulary(String englistWord) {
+        this.englishWord = englistWord;
+    }
 
     public String getEnglishWord() {
         return englishWord;
