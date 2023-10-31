@@ -16,7 +16,9 @@ import java.io.IOException;
  */
 public class Dictionary {
 
-    private AVLTree<Vocabulary> dictionary = new AVLTree();
+    private final AVLTree<Vocabulary> dictionary = new AVLTree();
+    
+    private static final String databaseFile = "dictionary.txt";
     
     private static Dictionary instance = null;
 
@@ -26,7 +28,7 @@ public class Dictionary {
     public static Dictionary getInstance() {
         if (Dictionary.instance == null) {
             Dictionary.instance = new Dictionary();
-            Dictionary.instance.loadDataFromFile("dictionary.txt");
+            Dictionary.instance.loadDataFromFile(databaseFile);
         }
         return Dictionary.instance;
     }
