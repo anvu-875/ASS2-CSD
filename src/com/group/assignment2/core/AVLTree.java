@@ -85,16 +85,17 @@ public class AVLTree<T extends Comparable<T>> implements Iterable<T> {
     //III.Main functions
     
     //1.Insert
-    public void insert(T value) {
+    public boolean insert(T value) {
         if (value == null) {
-            return;
+            return false;
         }
         root = insert(root, value);
+        return true;
     }
 
     private Node<T> insert(Node<T> node, T value) {
         if (node == null) {
-            return new Node<>(value);
+            return new Node<T>(value);
         }
         if (value.compareTo(node.data) < 0) {
             node.left = insert(node.left, value);
@@ -108,11 +109,14 @@ public class AVLTree<T extends Comparable<T>> implements Iterable<T> {
     }
     
     //2.Delete
-    public void delete(T value) {
+    private boolean isDel = false;
+    
+    public boolean delete(T value) {
         if (value == null) {
-            return;
+            return false;
         }
         root = delete(root, value);
+        return isDel;
     }
 
     private Node<T> delete(Node<T> node, T value) {
@@ -124,6 +128,9 @@ public class AVLTree<T extends Comparable<T>> implements Iterable<T> {
         } else if (value.compareTo(node.data) > 0) {
             node.right = delete(node.right, value);
         } else {
+            if (!isDel) {
+                isDel = true;
+            }
             if ((node.left == null) || (node.right == null)) {
                 Node<T> temp = null;
                 if (temp == node.left) {
@@ -334,7 +341,8 @@ public class AVLTree<T extends Comparable<T>> implements Iterable<T> {
 //        avl.insert(25);
 //        avl.insert(30);
 //        avl.insert(48);
-//        avl.insert(70);
+//        System.out.println(avl.insert(70));
+//        System.out.println(avl.delete(12));
 ////        avl.inorderTraversal((data) -> {
 ////            System.out.print(data + " ");
 ////        });
