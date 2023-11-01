@@ -41,9 +41,9 @@ public class Dictionary {
 
                 if (fields.length >= 2) {
                     String englistWord = fields[0].trim();
-                    String vietnameseWord = fields[1].trim();
+                    String vietnameseMeaning = fields[1].trim();
 
-                    Vocabulary word = new Vocabulary(englistWord, vietnameseWord);
+                    Vocabulary word = new Vocabulary(englistWord, vietnameseMeaning);
                     this.dictionary.insert(word);
                 }
             }
@@ -52,11 +52,11 @@ public class Dictionary {
         }
     }
 
-    public boolean addWord(String englishWord, String vietnameseWord) {
-        if (englishWord == null || vietnameseWord == null || englishWord.isEmpty() || vietnameseWord.isEmpty()) {
+    public boolean addWord(String englishWord, String vietnameseMeaning) {
+        if (englishWord == null || vietnameseMeaning == null || englishWord.isEmpty() || vietnameseMeaning.isEmpty()) {
             return false;
         }
-        Vocabulary newWord = new Vocabulary(englishWord, vietnameseWord);
+        Vocabulary newWord = new Vocabulary(englishWord, vietnameseMeaning);
         return this.dictionary.insert(newWord);
     }
 
@@ -83,19 +83,11 @@ public class Dictionary {
     }
 
     public void printAll() {
+        int count = 0;
         if (!this.dictionary.isEmpty()) {
             for (Vocabulary vocab : this.dictionary) {
-                System.out.println(vocab);
+                System.out.println(++count + "." + vocab);
             }
         }
     }
-
-//    public static void main(String[] args) {
-//        Dictionary ls = Dictionary.getInstance();
-////        for (Vocabulary voca : ls.dictionary) {
-////            System.out.println(voca);
-////        }
-//        System.out.println(ls.getPath("versatile", null));
-//        ls.printAll();
-//    }
 }

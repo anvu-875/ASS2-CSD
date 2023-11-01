@@ -10,11 +10,11 @@ package com.group.assignment2.model;
  */
 public class Vocabulary implements Comparable<Vocabulary>{
     private String englishWord;
-    private String vietnameseWord;
+    private String vietnameseMeaning;
 
-    public Vocabulary(String englishWord, String vietnameseWord) {
+    public Vocabulary(String englishWord, String vietnameseMeaning) {
         this.englishWord = englishWord;
-        this.vietnameseWord = vietnameseWord;
+        this.vietnameseMeaning = vietnameseMeaning;
     }
     
     public Vocabulary(String englistWord) {
@@ -29,12 +29,12 @@ public class Vocabulary implements Comparable<Vocabulary>{
         this.englishWord = englishWord;
     }
 
-    public String getVietnameseWord() {
-        return vietnameseWord;
+    public String getVietnameseMeaning() {
+        return vietnameseMeaning;
     }
 
-    public void setVietnameseWord(String vietnameseWord) {
-        this.vietnameseWord = vietnameseWord;
+    public void setVietnameseMeaning(String vietnameseMeaning) {
+        this.vietnameseMeaning = vietnameseMeaning;
     }
 
     @Override
@@ -44,6 +44,6 @@ public class Vocabulary implements Comparable<Vocabulary>{
 
     @Override
     public String toString() {
-        return  englishWord + ": " + vietnameseWord;
+        return  englishWord + ": " + vietnameseMeaning;
     }
 }
