@@ -338,29 +338,4 @@ public class AVLTree<T extends Comparable<T>> implements Iterable<T> {
             }
         };
     }
-    
-    public static void main(String[] args) {
-        AVLTree avl = new AVLTree();
-        avl.insert(5);
-        avl.insert(30);
-        avl.insert(10);
-        avl.insert(60);
-        avl.insert(25);
-        avl.insert(70);
-        avl.insert(48);
-        avl.insert(4);
-        avl.insert(7);
-        avl.insert(20);
-        avl.insert(28);
-        avl.insert(42);
-        avl.insert(50);
-        avl.insert(62);
-        avl.insert(88);
-//        avl.postorderTraversal((data) -> {
-//            System.out.println(data);
-//        });
-//        
-        System.out.println(avl.insert(12));
-        System.out.println(avl.insert(5));
-    }
 }
