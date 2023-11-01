@@ -9,6 +9,7 @@ package com.group.assignment2.core;
  *
  * @author hoang
  */
+@FunctionalInterface
 public interface DIterable<T> {
     void iterable(T data);
 }
