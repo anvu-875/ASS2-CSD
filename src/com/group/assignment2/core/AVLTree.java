@@ -89,9 +89,10 @@ public class AVLTree<T extends Comparable<T>> implements Iterable<T> {
     //III.Main functions
     
     //1.Insert
-    private boolean isAdd = false;
+    private boolean isAdd;
     
     public boolean insert(T value) {
+        isAdd = false;
         if (value == null) {
             return false;
         }
@@ -116,9 +117,10 @@ public class AVLTree<T extends Comparable<T>> implements Iterable<T> {
     }
     
     //2.Delete
-    private boolean isDel = false;
+    private boolean isDel;
     
     public boolean delete(T value) {
+        isDel = false;
         if (value == null) {
             return false;
         }
@@ -335,5 +337,30 @@ public class AVLTree<T extends Comparable<T>> implements Iterable<T> {
                 return dataList.remove(0).data;
             }
         };
+    }
+    
+    public static void main(String[] args) {
+        AVLTree avl = new AVLTree();
+        avl.insert(5);
+        avl.insert(30);
+        avl.insert(10);
+        avl.insert(60);
+        avl.insert(25);
+        avl.insert(70);
+        avl.insert(48);
+        avl.insert(4);
+        avl.insert(7);
+        avl.insert(20);
+        avl.insert(28);
+        avl.insert(42);
+        avl.insert(50);
+        avl.insert(62);
+        avl.insert(88);
+//        avl.postorderTraversal((data) -> {
+//            System.out.println(data);
+//        });
+//        
+        System.out.println(avl.insert(12));
+        System.out.println(avl.insert(5));
     }
 }
