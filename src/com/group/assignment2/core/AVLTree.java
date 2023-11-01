@@ -236,11 +236,10 @@ public class AVLTree<T extends Comparable<T>> implements Iterable<T> {
         if(val1.compareTo(mainRoot.data) != 0) {
             Node<T> currLeft = mainRoot.left;
             while (val1.compareTo(currLeft.data) != 0) {
-                result = " -> " + currLeft.data.toString();
+                result = " -> " + currLeft.data.toString() + result;
                 if (val1.compareTo(currLeft.data) > 0) {
                     currLeft = currLeft.right;
-                }
-                if (val1.compareTo(currLeft.data) < 0) {
+                } else if (val1.compareTo(currLeft.data) < 0) {
                     currLeft = currLeft.left;
                 }
             }
@@ -254,8 +253,7 @@ public class AVLTree<T extends Comparable<T>> implements Iterable<T> {
                 result += currRight.data.toString() + " -> ";
                 if (val2.compareTo(currRight.data) > 0) {
                     currRight = currRight.right;
-                }
-                if (val2.compareTo(currRight.data) < 0) {
+                } else if (val2.compareTo(currRight.data) < 0) {
                     currRight = currRight.left;
                 }
             }
@@ -337,5 +335,29 @@ public class AVLTree<T extends Comparable<T>> implements Iterable<T> {
                 return dataList.remove(0).data;
             }
         };
+    }
+    
+    public static void main(String[] args) {
+        AVLTree avl = new AVLTree();
+        avl.insert(5);
+        avl.insert(30);
+        avl.insert(10);
+        avl.insert(60);
+        avl.insert(25);
+        avl.insert(70);
+        avl.insert(48);
+        avl.insert(4);
+        avl.insert(7);
+        avl.insert(20);
+        avl.insert(28);
+        avl.insert(42);
+        avl.insert(50);
+        avl.insert(62);
+        avl.insert(88);
+//        avl.postorderTraversal((data) -> {
+//            System.out.println(data);
+//        });
+//                
+        System.out.println(avl.findPath(20, 62));
     }
 }
