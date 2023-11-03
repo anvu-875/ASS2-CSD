@@ -142,7 +142,6 @@ public class AVLTree<T extends Comparable<T>> implements Iterable<T> {
             }
             if ((node.left == null) || (node.right == null)) {
                 node = (node.left != null) ? node.left : node.right;
-                
             } else {
                 Node<T> temp = minValueNode(node.right);
                 node.data = temp.data;
